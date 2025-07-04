@@ -10,7 +10,7 @@ function App() {
     const formData = new FormData();
     formData.append("odometer", image);
 
-    const res = await fetch("https://greenkarma-backend.onrender.com/api/upload", {
+    const res = await fetch("https://greenkarma-backend.onrender.com", {
       method: "POST",
       body: formData,
     });
