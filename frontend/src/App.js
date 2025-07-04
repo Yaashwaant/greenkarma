@@ -45,7 +45,7 @@ function App() {
     }
 
     try {
-      const response = await fetch('http://localhost:5000/calculate', {
+      const response = await fetch('https://greenkarma.onrender.com/calculate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ monthlyDistance: distanceNum, fossilFuelType }),
@@ -57,7 +57,7 @@ function App() {
       setResult(data);
 
       // Fetch yearly data
-      const yearlyResponse = await fetch('http://localhost:5000/calculate-yearly', {
+      const yearlyResponse = await fetch('https://greenkarma.onrender.com/calculate-yearly', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ monthlyDistance: distanceNum, fossilFuelType }),
